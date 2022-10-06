@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786961352451",
+    "project_id": "myappofpets",
+    "storage_bucket": "myappofpets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786961352451:android:e21d89c8ee1ae25d70cb36",
+        "android_client_info": {
+          "package_name": "com.imanol.myappofpets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786961352451-8f6n6p7cit7cm2hmaahpabufed1aej0j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDEQIFgWzlt_kONzEquowv0zu6JSYjVRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786961352451-8f6n6p7cit7cm2hmaahpabufed1aej0j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
