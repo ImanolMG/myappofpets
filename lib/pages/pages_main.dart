@@ -20,26 +20,81 @@ class Pages_main extends StatelessWidget {
           Icon(Icons.person),
         ],
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
-        children: const [
-          Text.rich(
-            TextSpan(
-              text: 'Hola ',
-              style: TextStyle(
-                fontSize: 30,
-              ),
-              children: <TextSpan>[
-                TextSpan(
-                    text: 'Juan,',
-                    style: TextStyle(
-                      color: Color.fromRGBO(117, 167, 86, 1),
-                      fontSize: 30,
-                    )),
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 25, 20, 0),
+            child: ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: Row(
+                    children: const [
+                      Text(
+                        'Hola',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 5, 5, 5),
+                          fontSize: 35,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 5.0),
+                        child: Text(
+                          'Juan,',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 102, 184, 120),
+                            fontSize: 35,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Segunda secciíon de imagen
+                Container(
+                  padding: const EdgeInsets.fromLTRB(280, 10, 10, 0),
+                  child: Image.asset(
+                    'assets/images/LogoInicio.png',
+                    width: 40.0,
+                    height: 60.0,
+                  ),
+                ),
+
+                //Tercera sección: Text + icons
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                  child: Row(
+                    children: const [
+                      Icon(
+                        Icons.pets,
+                        color: Color.fromARGB(255, 102, 184, 120),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: Text(
+                          'Entregar ahora',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 179, 179, 179)),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 0, top: 30),
+                        child: Text('Calle 109'),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 0, top: 30),
+                        child: Icon(
+                          Icons.keyboard_arrow_down,
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
-          )
-        ],
+          ),
+        ),
       ),
     );
   }

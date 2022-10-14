@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:myappofpets/pages/home_Entry.dart';
+//import 'package:myappofpets/pages/home_Entry.dart';
 import 'package:myappofpets/pages/pages_main.dart';
 
 Future<void> main() async {
