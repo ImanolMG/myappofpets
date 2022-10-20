@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 //import 'package:myappofpets/pages/home_Entry.dart';
 import 'package:myappofpets/pages/pages_main.dart';
+//import 'package:myappofpets/pages/carrusel.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const HomeEntry(),
       home: const Pages_main(),
+      //home: const Carrusel(),
     );
   }
 }
