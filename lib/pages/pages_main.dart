@@ -11,6 +11,10 @@ class Pages_main extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             _AppBar(),
+            _Banner(),
+            ImageBanner(),
+            _BannerLocation(),
+            _LocatinStreet(),
           ],
         ),
       ),
@@ -33,6 +37,91 @@ class Pages_main extends StatelessWidget {
         ),
         Icon(Icons.person),
       ],
+    );
+  }
+
+  Widget _Banner() {
+    return Padding(
+        padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+        child: Row(
+          children: const <Widget>[
+            Text(
+              'Hola ',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Juan',
+              style: TextStyle(
+                color: Color.fromRGBO(117, 167, 86, 1),
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ));
+  }
+
+  Widget ImageBanner() {
+    return Padding(
+        padding: const EdgeInsets.only(top: 0, bottom: 0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset(
+              'assets/images/LogoInicio.png',
+              width: 120.0,
+              height: 60.0,
+            ),
+          ],
+        ));
+  }
+
+  Widget _BannerLocation() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+      child: Row(
+        children: const [
+          Icon(
+            Icons.pets,
+            color: Color.fromRGBO(117, 167, 86, 1),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: 10,
+            ),
+            child: Text(
+              'Entregar ahora',
+              style: TextStyle(
+                color: Color.fromRGBO(157, 157, 157, 1),
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _LocatinStreet() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 55.0, bottom: 0, top: 0),
+      child: Row(
+        children: const [
+          Text(
+            'Calle 109',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 15,
+              fontWeight: FontWeight.normal,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
