@@ -10,11 +10,15 @@ class Pages_main extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
+            //Section of appbar
             _AppBar(),
+            //Section of banner
             _Banner(),
             ImageBanner(),
             _BannerLocation(),
             _LocatinStreet(),
+            //Section my pet
+            _MyPet(),
           ],
         ),
       ),
@@ -120,6 +124,68 @@ class Pages_main extends StatelessWidget {
               fontWeight: FontWeight.normal,
             ),
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _MyPet() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 0, top: 10),
+            child: Column(
+              children: const [
+                Text(
+                  'Mis mascotas',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Row(
+              children: [
+                FloatingActionButton(
+                  backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
+                  foregroundColor: const Color.fromRGBO(86, 46, 122, 1),
+                  onPressed: () {},
+                  child: const Icon(Icons.add),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Column(
+                    children: const <Widget>[
+                      Text(
+                        'Agregar ',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromRGBO(86, 46, 122, 1),
+                        ),
+                      ),
+                      Text(
+                        'mascota',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromRGBO(86, 46, 122, 1),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
