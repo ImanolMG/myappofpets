@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import '../components/pet_crousel.dart';
 
 class Pages_main extends StatelessWidget {
   const Pages_main({Key? key}) : super(key: key);
@@ -19,6 +20,9 @@ class Pages_main extends StatelessWidget {
             _LocatinStreet(),
             //Section my pet
             _MyPet(),
+
+            //Carousel
+            const PetCarousel(),
           ],
         ),
       ),
