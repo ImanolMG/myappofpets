@@ -23,6 +23,9 @@ class Pages_main extends StatelessWidget {
 
             //Carousel
             const PetCarousel(),
+
+            //Seeker
+            _Buscador()
           ],
         ),
       ),
@@ -117,7 +120,7 @@ class Pages_main extends StatelessWidget {
 
   Widget _LocatinStreet() {
     return Padding(
-      padding: const EdgeInsets.only(left: 55.0, bottom: 0, top: 0),
+      padding: const EdgeInsets.only(left: 55.0, bottom: 10, top: 0),
       child: Row(
         children: const [
           Text(
@@ -135,7 +138,7 @@ class Pages_main extends StatelessWidget {
 
   Widget _MyPet() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+      padding: const EdgeInsets.fromLTRB(20, 30, 0, 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -155,7 +158,7 @@ class Pages_main extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 20),
             child: Row(
               children: [
                 FloatingActionButton(
@@ -191,6 +194,25 @@ class Pages_main extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _Buscador() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+      child: TextField(
+        decoration: InputDecoration(
+            labelStyle: const TextStyle(
+              color: Color.fromARGB(255, 69, 69, 69),
+            ),
+            labelText: 'Buscar productos o servicios',
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            suffixIcon: const Icon(
+              Icons.search,
+            )),
       ),
     );
   }
