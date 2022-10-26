@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import '../components/pet_crousel.dart';
@@ -25,7 +27,11 @@ class Pages_main extends StatelessWidget {
             const PetCarousel(),
 
             //Seeker
-            _Buscador()
+            _Buscador(),
+
+            _HotSale(),
+
+            _ProductsNearby(),
           ],
         ),
       ),
@@ -200,7 +206,7 @@ class Pages_main extends StatelessWidget {
 
   Widget _Buscador() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+      padding: const EdgeInsets.fromLTRB(20, 20, 50, 10),
       child: TextField(
         decoration: InputDecoration(
             labelStyle: const TextStyle(
@@ -213,6 +219,71 @@ class Pages_main extends StatelessWidget {
             suffixIcon: const Icon(
               Icons.search,
             )),
+      ),
+    );
+  }
+
+  Widget _HotSale() {
+    return Padding(
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
+        child: Row(
+          children: [
+            Image.asset(
+              'assets/images/hot_sale.png',
+            )
+          ],
+        ));
+  }
+
+  Widget _ProductsNearby() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            'Productos cerca',
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.normal,
+              color: Colors.black,
+            ),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                minimumSize: const Size(10.0, 25.0),
+                primary: const Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: const Color.fromARGB(255, 117, 167, 86)),
+            onPressed: () {},
+            child: const Text(
+              'Alimento',
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              'Accesorios',
+              style: TextStyle(
+                  color: Color.fromRGBO(120, 168, 89, 1), fontSize: 12),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              'Recompensas',
+              style: TextStyle(
+                color: Color.fromRGBO(120, 168, 89, 1),
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
