@@ -11,7 +11,7 @@ class ItemPet extends StatelessWidget {
         decoration: _boxDecoration(context),
         child: Padding(
           padding: const EdgeInsets.all(25.0),
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Row(

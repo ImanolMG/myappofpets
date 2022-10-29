@@ -10,6 +10,7 @@ class Pages_main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(245, 245, 245, 1),
       body: SafeArea(
         child: ListView(
           children: <Widget>[
@@ -32,6 +33,9 @@ class Pages_main extends StatelessWidget {
             _HotSale(),
 
             _ProductsNearby(),
+
+            //cards products
+            _CardProducts(),
           ],
         ),
       ),
@@ -286,5 +290,200 @@ class Pages_main extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget _CardProducts() {
+    return Padding(
+        padding: const EdgeInsets.only(right: 20.0, left: 20.0, top: 20.0),
+        child: Row(
+          children: [
+            Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 10,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: InkWell(
+                onTap: () {},
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      alignment: Alignment.bottomLeft,
+                      children: [
+                        Image.asset(
+                          'assets/images/royalcanin.jpg',
+                          height: 160.0,
+                          fit: BoxFit.fitWidth,
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 16, top: 16, right: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                minimumSize: const Size(10.0, 25.0),
+                                backgroundColor:
+                                    const Color.fromRGBO(255, 226, 236, 1)),
+                            onPressed: () {},
+                            child: const Text(
+                              'Oferta -50%',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(252, 38, 104, 1),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Nombre del producto',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'AFMP cerca de ti',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'Descripción',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(133, 136, 143, 1),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, bottom: 20),
+                            child: Column(
+                              children: const [
+                                Text(
+                                  '125',
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      color: Color.fromRGBO(252, 21, 96, 1)),
+                                ),
+                                Text(
+                                  '30 en stock',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 16,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: InkWell(
+                onTap: () {},
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      alignment: Alignment.bottomLeft,
+                      children: [
+                        Image.asset(
+                          'assets/images/Royal.png',
+                          height: 160.0,
+                          fit: BoxFit.fitWidth,
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 16, top: 16, right: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                minimumSize: const Size(10.0, 25.0),
+                                backgroundColor:
+                                    const Color.fromRGBO(255, 226, 236, 1)),
+                            onPressed: () {},
+                            child: const Text(
+                              'Oferta -50%',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(252, 38, 104, 1),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Nombre del producto',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'AFMP cerca de ti',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'Descripción',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(133, 136, 143, 1),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, bottom: 20),
+                            child: Column(
+                              children: const [
+                                Text(
+                                  '125',
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      color: Color.fromRGBO(252, 21, 96, 1)),
+                                ),
+                                Text(
+                                  '30 en stock',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ));
   }
 }
