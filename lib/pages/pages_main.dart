@@ -36,6 +36,14 @@ class Pages_main extends StatelessWidget {
 
             //cards products
             _CardProducts(),
+
+            //Services nearby
+            _ServicesNearby(),
+
+            //_cards services
+            _CardServices(),
+
+            _BottomBar(),
           ],
         ),
       ),
@@ -256,7 +264,7 @@ class Pages_main extends StatelessWidget {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(5.0),
                 ),
                 minimumSize: const Size(10.0, 25.0),
                 primary: const Color.fromARGB(255, 255, 255, 255),
@@ -485,5 +493,270 @@ class Pages_main extends StatelessWidget {
             ),
           ],
         ));
+  }
+
+  Widget _ServicesNearby() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            'Servicios cerca',
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.normal,
+              color: Colors.black,
+            ),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                minimumSize: const Size(10.0, 25.0),
+                primary: const Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: const Color.fromRGBO(79, 21, 129, 1)),
+            onPressed: () {},
+            child: const Text(
+              'Paseadores',
+              style: TextStyle(
+                fontSize: 12,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              'Restaurantes',
+              style: TextStyle(
+                  color: Color.fromRGBO(79, 21, 129, 1), fontSize: 12),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              'Foto estudio',
+              style: TextStyle(
+                color: Color.fromRGBO(79, 21, 129, 1),
+                fontSize: 12.0,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _CardServices() {
+    return Padding(
+        padding: const EdgeInsets.only(
+            right: 20.0, left: 20.0, top: 20.0, bottom: 10),
+        child: Row(
+          children: [
+            Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 10,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: InkWell(
+                onTap: () {},
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      alignment: Alignment.bottomLeft,
+                      children: [
+                        Image.network(
+                          'https://i.pinimg.com/564x/65/c2/51/65c2518ba5950369a5617a558456c078.jpg',
+                          height: 170.0,
+                          width: 180.0,
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 16, top: 16, right: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                minimumSize: const Size(10.0, 25.0),
+                                backgroundColor:
+                                    const Color.fromRGBO(255, 226, 236, 1)),
+                            onPressed: () {},
+                            child: const Text(
+                              'Oferta -50%',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(252, 38, 104, 1),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Nombre de servicio',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'AFMP cerca de ti',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'Descripción',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(133, 136, 143, 1),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, bottom: 20),
+                            child: Column(
+                              children: const [
+                                Text(
+                                  '80',
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      color: Color.fromRGBO(252, 21, 96, 1)),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              elevation: 16,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              ),
+              child: InkWell(
+                onTap: () {},
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Stack(
+                      alignment: Alignment.bottomLeft,
+                      children: [
+                        Image.network(
+                          'https://i.pinimg.com/564x/c9/c4/6a/c9c46ae2797a0c61bdf3f12f917684cf.jpg',
+                          height: 170.0,
+                          width: 170.0,
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 16, top: 16, right: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                minimumSize: const Size(10.0, 25.0),
+                                backgroundColor:
+                                    const Color.fromRGBO(255, 226, 236, 1)),
+                            onPressed: () {},
+                            child: const Text(
+                              'Oferta -50%',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromRGBO(252, 38, 104, 1),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Nombre de servicio',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'AFMP cerca de ti',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color.fromRGBO(117, 167, 86, 1),
+                            ),
+                          ),
+                          const Text(
+                            'Descripción',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(133, 136, 143, 1),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, bottom: 20),
+                            child: Column(
+                              children: const [
+                                Text(
+                                  '80',
+                                  style: TextStyle(
+                                      fontSize: 25,
+                                      color: Color.fromRGBO(252, 21, 96, 1)),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ));
+  }
+
+  Widget _BottomBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: const Color.fromRGBO(150, 199, 119, 1),
+      iconSize: 25.0,
+      selectedFontSize: 14.0,
+      unselectedFontSize: 12.0,
+      unselectedItemColor: const Color.fromRGBO(255, 255, 255, 1),
+      selectedItemColor: const Color.fromRGBO(181, 196, 248, 1),
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.calendar_month),
+          label: 'date',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.location_on),
+          label: 'Location',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite),
+          label: 'Favorite',
+        ),
+      ],
+    );
   }
 }
